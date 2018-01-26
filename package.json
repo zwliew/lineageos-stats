@@ -1,0 +1,26 @@
+{
+  "name": "lineageos-stats",
+  "version": "1.0.0",
+  "description": "API to scrape statistics from stats.lineageos.org",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwliew/lineageos-stats.git"
+  },
+  "author": "Zhao Wei Liew <zhaoweiliew@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zwliew/lineageos-stats/issues"
+  },
+  "homepage": "https://github.com/zwliew/lineageos-stats#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}
