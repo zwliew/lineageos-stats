@@ -1,5 +1,7 @@
 # lineageos-stats
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zwliew/lineageos-stats.svg)](https://greenkeeper.io/)
+
 An API to scrape all the relevant statistics from stats.lineageos.org.
 
 ## Stats included
