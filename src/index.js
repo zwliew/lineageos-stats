@@ -1,10 +1,16 @@
-const axios = require('axios')
+const fetch = require('cross-fetch')
 const cheerio = require('cheerio')
 
 const BASE_URL = 'https://stats.lineageos.org/'
 
+async function fetchWebsite() {
+  const res = await fetch(BASE_URL)
+  const data = await res.text()
+  return data
+}
+
 async function getModels() {
-  const { data } = await axios.get(BASE_URL)
+  const data = await fetchWebsite()
   const $ = cheerio.load(data)
   const models = $('#top-devices .leaderboard-row').map((i, el) => ({
     name: el.children[1].children[1].children[0].data,
@@ -15,7 +21,7 @@ async function getModels() {
 }
 
 async function getCountries() {
-  const { data } = await axios.get(BASE_URL)
+  const data = await fetchWebsite()
   const $ = cheerio.load(data)
   const countries = $('#top-countries .leaderboard-row').map((i, el) => ({
     code: el.children[1].children[1].children[0].data,
@@ -26,13 +32,13 @@ async function getCountries() {
 }
 
 async function getTotalInstalls() {
-  const { data } = await axios.get(BASE_URL)
+  const data = await fetchWebsite()
   const $ = cheerio.load(data)
   return parseInt($('#total-download .aside-value')[0].children[0].data)
 }
 
 async function getLastUpdated() {
-  const { data } = await axios.get(BASE_URL)
+  const data = await fetchWebsite()
   const $ = cheerio.load(data)
   const dateStr = $('#total-download .aside-date')[0].children[0].data
   const date = Date.parse(dateStr.substr(11, 16))
