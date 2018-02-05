@@ -1,7 +1,7 @@
 {
   "name": "lineageos-stats",
   "version": "1.0.1",
-  "description": "API to scrape statistics from stats.lineageos.org",
+  "description": "An API to scrape statistics from stats.lineageos.org",
   "main": "src/index.js",
   "scripts": {
     "test": "ava test"
@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/zwliew/lineageos-stats.git"
   },
+  "keywords": [
+    "lineageos",
+    "stats",
+    "api",
+    "web",
+    "scraper"
+  ],
   "author": "Zhao Wei Liew <zhaoweiliew@gmail.com>",
   "license": "MIT",
   "bugs": {
