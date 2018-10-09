@@ -1,5 +1,7 @@
 # lineageos-stats
 
+**NOTE:** This is now deprecated as there is an official API [here](https://stats.lineageos.org/api/v1/stats).
+
 An API to scrape all the relevant statistics from stats.lineageos.org.
 
 ## Stats included
